@@ -9,21 +9,19 @@
     // }
     // <?php echo "output"; 
     // <?= "output"
-    
-    for($i=0;$i<=100;$i++){
-       
+
+            // $x=51;
+            // echo $x%2==0?"Even":"Odd";
+            //concat 
+            //["red","green"][]
+for($i=0;$i<=100;$i++){
+        
             ?>
-            <b style='color:<?php 
-                if($i%2==0)
-                echo "red";
-                else
-                echo "green";
-            ?>;'><?=$i?></b><br>
-            
-<?php
+            <!-- <b style="color:<?=$i%2==0?'red':'green'?>"><?=$i?></b><br> -->
+            <b style="color:<?=["red","green"][$i%2]?>"><?=$i?></b><br>
+            <?php
         
     }
-
 ?>
 
     <!-- this is a html comment -->
