@@ -1,13 +1,34 @@
 <?php
+$students=[
+    [
+        "name"=>"Shanto",
+        "id"=>315163005
+    ],
+    [
+        "name"=>"Raju",
+        "id"=>315163002
+    ],
+    [
+        "name"=>"Arman",
+        "id"=>315163001
+    ],
+];
+    foreach($students as $student){
+        // var_dump($student);
+        if($student["id"]%2==0){
+            echo "Even ".$student["name"]."<br>";
+        }
+        else{
+            if($student["name"]=="Shanto"){
 
-$cities=["dhaka","chittagong","khulna","barishal","rajshahi"];
+                echo "Odd ".strrev($student["name"])."<br>";
+            }
+            else{
+                echo "Odd ".$student["name"]."<br>";
 
-    for($i=0;$i<count($cities);$i++){
-            echo str_replace("dhaka","<b style='color:red'>comilla</b>","<b style='color:green'>".$cities[$i]."</b><br>");
+            }
+
+        }
     }
+
 ?>
-
-
-
-
-
