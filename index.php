@@ -1,34 +1,11 @@
 <?php
-$students=[
-    [
-        "name"=>"Shanto",
-        "id"=>315163005
-    ],
-    [
-        "name"=>"Raju",
-        "id"=>315163002
-    ],
-    [
-        "name"=>"Arman",
-        "id"=>315163001
-    ],
-];
-    foreach($students as $student){
-        // var_dump($student);
-        if($student["id"]%2==0){
-            echo "Even ".$student["name"]."<br>";
-        }
-        else{
-            if($student["name"]=="Shanto"){
+    $array=["php","javascript","css","php","javascript","css"];
+    $array=array("php","js");
+    echo count($array);
+    for($i=count($array)-1;$i>=0;$i--)
+    echo $array[$i]."  ".$i."<br>";
 
-                echo "Odd ".strrev($student["name"])."<br>";
-            }
-            else{
-                echo "Odd ".$student["name"]."<br>";
-
-            }
-
-        }
-    }
+    foreach($array as $x)
+        echo $x."<br>";
 
 ?>
