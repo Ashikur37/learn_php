@@ -1,11 +1,26 @@
 <?php
-    $array=["php","javascript","css","php","javascript","css"];
-    $array=array("php","js");
-    echo count($array);
-    for($i=count($array)-1;$i>=0;$i--)
-    echo $array[$i]."  ".$i."<br>";
+   $persons=
+//    [
+    [
+        "name"=>"Bill",
+        "age"=>25,
+        "gender"=>"Male",
+        "address"=>"Dhaka"
+    ];
+//     [
+//         "name"=>"Bejos",
+//         "age"=>27,
+//         "gender"=>"Male"
+//     ],
+//     [
+//         "name"=>"Julia",
+//         "age"=>29,
+//         "gender"=>"FeMale"
+//     ],
+//    ];
 
-    foreach($array as $x)
-        echo $x."<br>";
-
+   foreach($persons as $key=>$value)
+    {
+        echo $key."<br>";
+    }
 ?>
