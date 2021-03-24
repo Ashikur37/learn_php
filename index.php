@@ -1,26 +1,9 @@
 <?php
-   $persons=
-//    [
-    [
-        "name"=>"Bill",
-        "age"=>25,
-        "gender"=>"Male",
-        "address"=>"Dhaka"
-    ];
-//     [
-//         "name"=>"Bejos",
-//         "age"=>27,
-//         "gender"=>"Male"
-//     ],
-//     [
-//         "name"=>"Julia",
-//         "age"=>29,
-//         "gender"=>"FeMale"
-//     ],
-//    ];
+    session_start();
+    
+ echo "This is homepage";
 
-   foreach($persons as $key=>$value)
-    {
-        echo $key."<br>";
-    }
+
+    
+
 ?>
