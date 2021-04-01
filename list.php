@@ -1,3 +1,14 @@
+<?php
+session_start();
+
+if(!isset($_SESSION["user_id"])){
+    echo "Please login to add task";
+    ?>
+    <a href="login.php">Login Now</a>
+    <?php
+    die();
+}
+?>
 <html lang="en">
 
 <head>
@@ -14,9 +25,12 @@
 <body>
     <?php
     include_once('db.php');
-    $tasks = $mysqli->query('select * from tasks');
+    $userId=$_SESSION["user_id"];
+    $tasks = $mysqli->query("select * from tasks where user_id=$userId");
     ?>
     <div class="container">
+    <h3>Welcome <?=$_SESSION["username"]?></h3>
+    <a href="logout.php">Logout</a>
         <h3>Task list</h3>
         <a href="add.php" class="btn btn-info">Add Task</a>
         <table class="table table-bordered table-striped">

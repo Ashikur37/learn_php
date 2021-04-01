@@ -1,3 +1,15 @@
+<?php
+session_start();
+
+if(!isset($_SESSION["user_id"])){
+    echo "Please login to add task";
+    ?>
+    <a href="login.php">Login Now</a>
+    <?php
+    die();
+}
+?>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -40,7 +52,8 @@
              * 1 for running
              * 2 for complete
              */
-            $mysqli->query("insert into tasks values(null,'$name','$details',0)");
+            $userId=$_SESSION["user_id"];
+            $mysqli->query("insert into tasks values(null,'$name','$details',0,$userId)");
             //redirect to list
             header('location:list.php');
         }
@@ -51,6 +64,9 @@
     }
 ?>
     <div class="container">
+    <h3>Welcome <?=$_SESSION["username"]?></h3>
+    <a href="logout.php">Logout</a><br>
+    <a href="list.php">Task List</a>
     <h4>Add new Task</h4>
         <form action="add.php" method="post">
                 <div class="form-group">
